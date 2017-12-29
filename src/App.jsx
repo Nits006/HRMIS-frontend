@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { userActions } from './_actions';
 import { LoginPage } from './loginpage/LoginPage';
 import {HashRouter, Switch, Route, Link } from 'react-router-dom';
+import Layout from './layout';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,9 +15,8 @@ class App extends React.Component {
         return (
         
                             <div>
-                            <Switch>
-                                <Route exact path="/" component={LoginPage} />
-  </Switch>
+                            <LoginPage/>
+                            <Layout/>
                             </div>
                     
         );

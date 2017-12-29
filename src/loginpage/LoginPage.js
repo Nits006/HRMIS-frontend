@@ -2,6 +2,12 @@
 import '../App.css';
 import { connect } from 'react-redux';
 import { userActions } from '../_actions';
+import { hashHistory } from 'react-router';
+import { browserHistory } from 'react-router'
+import thunk from 'redux-thunk';
+import Layout from '../layout';
+import {Router, HashRouter, Switch, Route, Link } from 'react-router-dom';
+
 
 class LoginPage extends Component {
     constructor(props){
@@ -24,9 +30,9 @@ class LoginPage extends Component {
     handleChange(e){
       this.setState({[e.target.name]:e.target.value});
     };
-
     handleLogin(e) {
         e.preventDefault();
+        console.log("hi");
         const data = this.state;
 
         //call API to match login credentials
@@ -36,10 +42,25 @@ class LoginPage extends Component {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(res => {
-            return res;
-        }).catch(err => err);
-    };
+        }).then(res => res.json())
+        .then (responsedata => {
+            console.log(responsedata)
+            this.setState({emp:responsedata});
+            console.log(this.state);
+            if(responsedata.id=data.id){
+                console.log("coming");
+                const location = {
+               pathname: '#/dashboard'
+ 
+               }
+                
+            browserHistory.push(location);
+            location.href="dashboard";
+            }
+        })
+        .catch(err => err);
+    }
+
    
   render() {
     
@@ -64,7 +85,7 @@ class LoginPage extends Component {
                             <i className="material-icons">person</i>
                         </span>
                         <div className="form-group">
-                            <input type="text" className="form-control" name="username" placeholder="Login ID"
+                            <input type="text" className="form-control" name="id" placeholder="Login ID"
                              onChange = {this.handleChange} required autoFocus/>
                         </div>
                     </div>
@@ -80,7 +101,7 @@ class LoginPage extends Component {
                     <div className="row">
                         <div align="center">
                         <div className="form-group">
-                            <button className="btn btn-info btn-lg  col-md-6 col-xs-6 col-xs-offset-3 col-md-offset-3 waves-effect">SIGN IN</button>
+                          <button className="btn btn-info btn-lg  col-md-6 col-xs-6 col-xs-offset-3 col-md-offset-3 waves-effect">SIGN IN</button>
                         </div>
                         </div>
                     </div>
@@ -101,6 +122,7 @@ class LoginPage extends Component {
     );
   }
 }
+
 function mapStateToProps(state) {
   
     return {
