@@ -418,7 +418,7 @@ a:focus {
  */
 .main-sidebar {
   position: absolute;
-  background-color: #b7bed0;
+  background-color: #1ec8d23d;
   top: 0;
   left: 0;
   padding-top: 50px;
@@ -1819,6 +1819,7 @@ a:focus {
 }
 .box-header.with-border {
   border-bottom: 1px solid #f4f4f4;
+  background-color: #0014ff2e;
 }
 .collapsed-box .box-header.with-border {
   border-bottom: none;
@@ -1831,6 +1832,8 @@ a:focus {
   font-size: 18px;
   margin: 0;
   line-height: 1;
+  color: #174a8a;
+  font-weight: bold;
 }
 .box-header > .fa,
 .box-header > .glyphicon,
@@ -1871,6 +1874,7 @@ a:focus {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   padding: 10px;
+  background: #1ec8d23d;
 }
 .no-header .box-body {
   border-top-right-radius: 3px;
@@ -1907,7 +1911,7 @@ a:focus {
   border-bottom-left-radius: 3px;
   border-top: 1px solid #f4f4f4;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #0014ff2e;
 }
 .chart-legend {
   margin: 10px 0;
