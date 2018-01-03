@@ -351,6 +351,15 @@ a:focus {
 .content-header > .breadcrumb > li + li:before {
   content: '>\00a0';
 }
+
+.sidebar-menu li a{
+  color: white;
+}
+
+.profile-style{
+  color: #fff;
+}
+
 @media (max-width: 991px) {
   .content-header > .breadcrumb {
     position: relative;
@@ -418,7 +427,7 @@ a:focus {
  */
 .main-sidebar {
   position: absolute;
-  background-color: #1ec8d23d;
+  background-color: grey;
   top: 0;
   left: 0;
   padding-top: 50px;
@@ -490,11 +499,11 @@ a:focus {
 }
 .user-panel > .image > img {
   width: 100%;
-  max-width: 45px;
+  max-width: 55px;
   height: auto;
 }
 .user-panel > .info {
-  padding: 5px 5px 5px 15px;
+  padding: 0 5px 5px 15px;
   line-height: 1;
   position: absolute;
   left: 55px;
@@ -521,8 +530,9 @@ a:focus {
 }
 .sidebar-menu > li {
   position: relative;
-  margin: 0;
+  margin: 0 0 4px 0;
   padding: 0;
+  background-color: #00dcff;
 }
 .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
@@ -669,6 +679,7 @@ a:focus {
 .main-sidebar .user-panel,
 .sidebar-menu > li.header {
   white-space: nowrap;
+  height: 135px;
   overflow: hidden;
 }
 .sidebar-menu:hover {
@@ -687,6 +698,11 @@ a:focus {
   right: 10px;
   top: 50%;
   margin-top: -7px;
+}
+
+.portal-logo{
+      height: 56px;
+    width: 68px;
 }
 /*
  * Component: Control sidebar. By default, this is the right sidebar.
@@ -1819,7 +1835,7 @@ a:focus {
 }
 .box-header.with-border {
   border-bottom: 1px solid #f4f4f4;
-  background-color: #0014ff2e;
+  background-color: grey;
 }
 .collapsed-box .box-header.with-border {
   border-bottom: none;
@@ -1832,7 +1848,7 @@ a:focus {
   font-size: 18px;
   margin: 0;
   line-height: 1;
-  color: #174a8a;
+  color: #fff;
   font-weight: bold;
 }
 .box-header > .fa,
@@ -1874,7 +1890,7 @@ a:focus {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   padding: 10px;
-  background: #1ec8d23d;
+/*  background: #1ec8d23d;*/
 }
 .no-header .box-body {
   border-top-right-radius: 3px;

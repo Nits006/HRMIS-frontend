@@ -50,10 +50,10 @@ class LoginPage extends Component {
             if(responsedata.id=data.id){
                 console.log("coming");
                 const location = {
-               pathname: '#/dashboard'
+               pathname: '/dashboard'
  
                }
-                
+            console.log('success');    
             browserHistory.push(location);
             location.href="dashboard";
             }
