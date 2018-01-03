@@ -93,9 +93,7 @@ export default class Content extends Component {
                                     </div>
                                     </div>
                                 </div>
-                                <div className="box-footer">
-                                    
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

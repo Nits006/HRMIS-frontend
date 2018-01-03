@@ -5,7 +5,7 @@ export default class Header extends Component {
         return (
             <header className="main-header">
                 <a href="#" className="logo">
-                <img src="img/javarnd.png" alt="logo"/>
+                <img src="img/javarnd.png" className="portal-logo" alt="logo"/>
                 </a>
                 <nav className="navbar navbar-static-top">
                     <a href="#" className="sidebar-toggle" data-toggle="push-menu" role="button">
